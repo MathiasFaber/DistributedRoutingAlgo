@@ -19,7 +19,8 @@ Mathias Faber Kristiansen
 
 # Description of how the assignment is solved
 The distributed routing algorithm is supposed to find the shortest/cheapest route from U to V, given this graph that also can be found at the top of the "route.js" document. 
-{
+
+´´´ javascript 
     let graph = {
         U: { A: 17, B: 5, C: 11, V: 25 },
         A: { U: 17, C: 3, D: 4 },
@@ -29,7 +30,9 @@ The distributed routing algorithm is supposed to find the shortest/cheapest rout
         S: { C: 7, V: 10},
         V: { D: 7, S: 10, U: 25}
     };
-}
+´´´
+
+
 The algortihm in that document finds the shortest/cheapest route, verfies that the route is correct, and starts sending requests asynchronous to the servers which each belong to a node in the graph. The requests are sent one by one, and only allows the next request to be sent, when a response has been received. 
 
 When the request is received at a given server, a response is printed in the terminal, which tells us which server/node that received a request. In that way, it is possible for us to look at the terminal and see the shortest/cheapest route. 
